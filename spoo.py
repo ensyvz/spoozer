@@ -13,6 +13,18 @@ def msToMinute(ms):
     time=minute+second
     return time
 
+def auth():
+    while True:
+        cid = '1613417d61fe44e2a072fbd78f0c684d'
+        csec = 'bdef638e4f564c7e9eee361a4440ccb0'
+        redir='http://localhost'
+
+        username = "x5ewxw339c9q44th6z4cpopeu"
+        scope= "user-read-currently-playing user-read-playback-state"
+
+        token = util.prompt_for_user_token(username, scope,cid,csec,redir)
+        time.sleep(3500)
+
 def main():
     cid = '1613417d61fe44e2a072fbd78f0c684d'
     csec = 'bdef638e4f564c7e9eee361a4440ccb0'
@@ -28,6 +40,8 @@ def main():
     nowArtistName=""
     prog = 0
     count = 0
+    authOp = threading.Thread(target=auth) 
+    authOp.start()
     while True:
         prevList = nowSongName
         prevProg = prog
