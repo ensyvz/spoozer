@@ -7,6 +7,9 @@ import time
 import dbOperation as db
 import threading
 
+
+token = "" 
+
 def msToMinute(ms):
     second = ms/1000
     minute = second // 60
@@ -15,6 +18,7 @@ def msToMinute(ms):
     return time
 
 def auth():
+    global token
     while True:
         cid = '1613417d61fe44e2a072fbd78f0c684d'
         csec = 'bdef638e4f564c7e9eee361a4440ccb0'
@@ -27,6 +31,7 @@ def auth():
         time.sleep(3500)
 
 def main():
+    global token
     cid = '1613417d61fe44e2a072fbd78f0c684d'
     csec = 'bdef638e4f564c7e9eee361a4440ccb0'
     redir='http://localhost'
