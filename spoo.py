@@ -5,6 +5,7 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import json
 import time
 import dbOperation as db
+import threading
 
 def msToMinute(ms):
     second = ms/1000
