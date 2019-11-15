@@ -5,4 +5,5 @@ Looks for what are you listening on spotify and download flac file of it from de
 ToDo:  
 -Error Handling  
 -Change name after download  
--Make spoo.py and zer.py runing from one app  
+-Make spoo.py and zer.py runing from one app   
+-Save listening time and song time to database for further data analysis 
