@@ -52,8 +52,10 @@ def main():
         prevList = nowSongName
         prevProg = prog
 
-        result = sp.current_user_playing_track()
-
+        try:
+            result = sp.current_user_playing_track()
+        except:
+            continue
         if result:
             prog = msToMinute(int(result['progress_ms']))
 
